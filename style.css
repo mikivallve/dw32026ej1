@@ -6,6 +6,8 @@
     --muted: #cbd5e1;
     --accent: #34d399;
     --accent-2: #60a5fa;
+    --danger: #f87171;
+    --success: #4ade80;
     --shadow: rgba(15, 23, 42, 0.35);
 }
 
@@ -81,4 +83,119 @@ ul {
 
 li {
     margin-bottom: 10px;
+}
+
+.contact-shell {
+    max-width: 760px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.nav-links a.active {
+    background: rgba(52, 211, 153, 0.15);
+    border-color: rgba(52, 211, 153, 0.4);
+}
+
+.form-card {
+    padding: 32px 28px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--muted);
+}
+
+input,
+textarea,
+button {
+    font: inherit;
+}
+
+input,
+textarea {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    background: rgba(15, 23, 42, 0.6);
+    color: var(--text);
+    padding: 12px 14px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid rgba(96, 165, 250, 0.8);
+    border-color: transparent;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.status-text {
+    display: block;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.status-text.error {
+    color: var(--danger);
+}
+
+.status-text.ok {
+    color: var(--success);
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #08121d;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-card {
+        padding: 22px 18px;
+    }
 }

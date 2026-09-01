@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto sobre Git</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<main class="contact-shell">
+		<header class="topbar">
+			<h1>Contacto</h1>
+			<nav class="nav-links">
+				<a href="index.html">Inicio</a>
+				<a href="contacto.html" class="active">Contacto</a>
+			</nav>
+		</header>
+
+		<section class="form-card">
+			<h2>¿Tienes dudas sobre Git?</h2>
+			<p>Escribe tu consulta y te responderemos con claridad.</p>
+
+			<form id="contactForm" novalidate>
+				<div class="form-group">
+					<label for="name">Nombre</label>
+					<input id="name" name="name" type="text" placeholder="Tu nombre" required>
+				</div>
+
+				<div class="form-group">
+					<label for="email">Correo electrónico</label>
+					<input id="email" name="email" type="email" placeholder="nombre@ejemplo.com" required>
+					<small id="emailStatus" class="status-text">Escribe un correo válido.</small>
+				</div>
+
+				<div class="form-group">
+					<label for="message">Pregunta</label>
+					<textarea id="message" name="message" rows="5" placeholder="Escribe tu duda sobre Git..."
+						required></textarea>
+				</div>
+
+				<button id="submitBtn" type="submit" disabled>Enviar pregunta</button>
+			</form>
+		</section>
+	</main>
+</body>
+
+</html>
