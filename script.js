@@ -41,12 +41,10 @@ form.addEventListener('submit', (event) => {
         return;
     }
 
-    event.preventDefault();
-    emailStatus.textContent = 'Gracias. Tu pregunta ha sido enviada.';
+    // Dejar que el envío nativo del formulario siga para que Netlify reciba el POST.
+    emailStatus.textContent = 'Enviando...';
     emailStatus.classList.remove('error');
     emailStatus.classList.add('ok');
-    form.reset();
-    //submitBtn.disabled = true;
 });
 
 updateEmailValidation();
