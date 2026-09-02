@@ -28,7 +28,7 @@ function updateEmailValidation() {
         emailStatus.classList.add('error');
     }
 
-    submitBtn.disabled = !form.checkValidity();
+    //submitBtn.disabled = !form.checkValidity();
 }
 
 emailInput.addEventListener('input', updateEmailValidation);
@@ -46,7 +46,7 @@ form.addEventListener('submit', (event) => {
     emailStatus.classList.remove('error');
     emailStatus.classList.add('ok');
     form.reset();
-    submitBtn.disabled = true;
+    //submitBtn.disabled = true;
 });
 
 updateEmailValidation();
